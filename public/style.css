@@ -1,0 +1,93 @@
+html, body{
+    margin:0px;
+    padding: 0px;
+    background-color: #1f1f1f;
+    color:#ddd;
+}
+div.main{
+    height:100vh;
+    display:flex;
+    width: 100vw;
+    background-color: #1f1f1f;
+}
+div.left{
+    display: flex;
+    flex: 0.8;
+    flex-direction: column;
+}
+div.right{
+    flex:0.2
+}
+div.all_videos{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#video-grid{
+    display: flex;
+    flex-wrap: wrap;
+    max-width:100%;
+    align-items: center;
+    justify-content: center;
+}
+video{
+    max-height: 200px;
+    object-fit: cover;
+    min-width: 300px;
+    border-radius: 5px;
+    border: 2px solid #ddd;
+
+}
+div.controls_block{
+    display: flex;
+    background: #2b2b2b;
+    padding: 10px;
+    font-size: 20px;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 80px;
+    color: #ddd;
+}
+.ctrl_btn{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    align-items: center;
+    cursor: pointer;
+    color: #ddd;
+    justify-content: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #6969695c;
+}
+.ctrl_btn > i{
+    font-size: 35px;
+}
+.controls{
+    
+    position: fixed;
+    width: 100vw;
+    bottom: 0px;
+}
+
+@media only screen and (max-width: 600px) {
+
+    div.left {
+        width: 100vw;
+        flex: 1;
+    }
+    video{
+        max-width: 80vw;
+    }
+    div.right {
+        display: none;
+    }
+    .ctrl_btn > i{
+        font-size: 20px;
+    }
+    .ctrl_btn {
+        padding: 8px 10px;
+    }
+  }
+
